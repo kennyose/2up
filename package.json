@@ -1,0 +1,27 @@
+{
+  "name": "2up",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "concurrently \"npm start\" \"npm run client\"",
+    "client": "cd client && npm start && cd..",
+    "build": "cd client && npm run build && cd..",
+    "push": "git push heroku master"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "dotenv": "^4.0.0",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "helmet": "^3.4.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.3.0"
+  }
+}
