@@ -8,7 +8,7 @@ import NavSideBar from './NavSideBar'
 class AppContainer extends Component {
   render () {
     return (
-      <App>
+      <App centered={false} >
         <Split flex='right' >
           <NavSideBar />
           {this.props.children}
