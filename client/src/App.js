@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Router, browserHistory } from 'react-router';
 
-import App from 'grommet/components/App';
-import Title from 'grommet/components/Title';
+import routes from './components/routes';
 
-export default () => (
-  <App>
-    <Title>Hello World</Title>
-    <p>Hello from a Grommet page!</p>
-  </App>
-);
+class App extends Component {
+  render() {
+    return (
+      <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0, 0)} />
+    )
+  }
+}
+
+export default App;
