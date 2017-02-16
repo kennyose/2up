@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import 'grommet/scss/vanilla/index.scss';
-//import './styles/index.css';
+import './styles/index.css';
 
 import App from './App';
 
