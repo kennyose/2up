@@ -45,8 +45,8 @@ class NavSideBar extends Component {
             <Anchor icon={<GroupIcon />} label='TESTIMONIES' animateIcon={true} href='#' />
             <Anchor icon={<UserIcon />} label='ACCOUNT' animateIcon={true} href='#' />
             <hr/>
-            <Anchor icon={<LoginIcon />} label='LOGIN' animateIcon={true} href='#' />
-            <Anchor icon={<UserAddIcon />} label='SIGNUP' animateIcon={true} href='#' />            
+            <Anchor icon={<LoginIcon />} label='LOGIN' animateIcon={true} path='login' />
+            <Anchor icon={<UserAddIcon />} label='REGISTER' animateIcon={true} path='register' />            
             <hr/>
           </Menu>
           </Box>
