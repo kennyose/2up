@@ -22,7 +22,7 @@ class Login extends Component {
   render() {
     return (
       <div className='center' >
-        <Section full={true} >
+        <Section full={true} align='center' >
           <LoginForm onSubmit={this.loginUser}
           align='center'
           usernameType='text'

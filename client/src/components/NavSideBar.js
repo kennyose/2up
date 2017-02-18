@@ -36,7 +36,7 @@ class NavSideBar extends Component {
           </Title>
         </Header>
         <Box flex='grow' justify='start'>
-          <Menu primary={true} size='large' >
+          <Menu primary={true} >
             <hr/>
             <Anchor icon={<HomeIcon />} label='HOME' animateIcon={true} href='#' />
             <Anchor icon={<AboutIcon />} label='ABOUT' animateIcon={true} href='#' />
