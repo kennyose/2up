@@ -1,3 +1,16 @@
+
+/**
+ * Add dotenv to set environment variables
+ */
+var dotenv = require('dotenv');
+
+if (process.env.NODE_ENV === 'production') {
+  dotenv.config({ path: './config/production' })
+} else {
+  dotenv.config({ path: './config/development' })
+}
+
+// Begin app
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');

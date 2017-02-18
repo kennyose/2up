@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+import {
+  signup
+} from '../../firebase/actions'
+
 import Section from 'grommet/components/Section'
 import Form from 'grommet/components/Form'
 import Header from 'grommet/components/Header'
@@ -23,10 +27,12 @@ class Register extends Component {
     name: '',
     gender: '',
     email: '',
+    number: '',
     username: '',
     password: '',
     comfirmpassword: '',
-    loading: false
+    loading: false,
+    errorMessage: ''
   }
 
   setTitle = (title) => {
@@ -62,7 +68,18 @@ class Register extends Component {
 
   registerUser = (e) => {
     e.preventDefault();
-    console.log(e);
+    this.setState({ loading: true })    
+    var {email, password, username, title, number, gender, name} = this.state;
+    signup(email, password, username, name, number, title, gender).then((userData) => {
+      this.setState({ loading: false });
+      // TODO: Redirect page to Dashboard??? or delegate to authStateChanged
+    }, (error) => {
+      this.setState({
+        loading: false,
+        errorMessage: error.message
+      })
+      // TODO: Handle error codes and set errorMessage state
+    })
   }
 
   render() {
