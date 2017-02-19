@@ -7,6 +7,7 @@ var url = require('url');
 var paths = require('./paths');
 var getClientEnvironment = require('./env');
 var ExtractTextPlugin = require('extract-text-webpack-plugin'); // create-react-app 16/02/2017
+var dotenv = require('dotenv-webpack');
 
 
 
@@ -210,6 +211,9 @@ module.exports = {
     ];
   },
   plugins: [
+    new dotenv({
+      path: './config/environment/production.env'
+    }),
     // Makes the public URL available as %PUBLIC_URL% in index.html, e.g.:
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     // In production, it will be an empty string unless you specify "homepage"

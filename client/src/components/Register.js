@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import {
   signup
-} from '../../firebase/actions'
+} from '../firebase/actions'
 
 import Section from 'grommet/components/Section'
 import Form from 'grommet/components/Form'

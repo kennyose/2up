@@ -2,7 +2,7 @@
 /**
  * Add dotenv to set environment variables
  */
-var dotenv = require('dotenv');
+const dotenv = require('dotenv');
 
 if (process.env.NODE_ENV === 'production') {
   dotenv.config({ path: './config/production' })

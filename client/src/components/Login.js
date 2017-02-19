@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import {
   login
-} from '../../firebase/actions'
+} from '../firebase/actions'
 
 import Section from 'grommet/components/Section'
 import Anchor from 'grommet/components/Anchor'
