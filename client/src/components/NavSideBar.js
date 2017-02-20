@@ -14,13 +14,14 @@ import GroupIcon from 'grommet/components/icons/base/Group'
 import UserIcon from 'grommet/components/icons/base/User'
 import AboutIcon from 'grommet/components/icons/base/Briefcase'
 import MailIcon from 'grommet/components/icons/base/Mail'
-import InfoIcon from 'grommet/components/icons/base/Info'
+import HelpIcon from 'grommet/components/icons/base/Help';
 import SocialFacebookIcon from 'grommet/components/icons/base/SocialFacebook';
 import SocialInstagramIcon from 'grommet/components/icons/base/SocialInstagram';
 import SocialTwitterIcon from 'grommet/components/icons/base/SocialTwitter';
 import SocialMailIcon from 'grommet/components/icons/base/SocialMail';
 import UserAddIcon from 'grommet/components/icons/base/UserAdd';
 import LoginIcon from 'grommet/components/icons/base/Login';
+import ArticleIcon from 'grommet/components/icons/base/Article';
 
 
 
@@ -38,19 +39,20 @@ class NavSideBar extends Component {
         <Box flex='grow' justify='start'>
           <Menu primary={true} >
             <hr/>
-            <Anchor icon={<HomeIcon />} label='HOME' animateIcon={true} href='#' />
-            <Anchor icon={<AboutIcon />} label='ABOUT' animateIcon={true} href='#' />
-            <Anchor icon={<MailIcon />} label='CONTACT' animateIcon={true} href='#' />
-            <Anchor icon={<InfoIcon />} label='FAQ' animateIcon={true} href='#' />
-            <Anchor icon={<GroupIcon />} label='TESTIMONIES' animateIcon={true} href='#' />
-            <Anchor icon={<UserIcon />} label='ACCOUNT' animateIcon={true} href='#' />
+            <Anchor icon={<HomeIcon />} label='HOME' animateIcon={true} path='/' />
+            <Anchor icon={<AboutIcon />} label='ABOUT' animateIcon={true} path='about' />
+            <Anchor icon={<MailIcon />} label='CONTACT' animateIcon={true} path='/contact' />
+            <Anchor icon={<HelpIcon />} label='FAQ' animateIcon={true} path='/faq' />
+            <Anchor icon={<GroupIcon />} label='TESTIMONIES' animateIcon={true} path='/testimonies' />
+            <Anchor icon={<ArticleIcon />} label='RULES' animateIcon={true} path='/rules' />            
+            <Anchor icon={<UserIcon />} label='ACCOUNT' animateIcon={true} path='/dashboard' />
             <hr/>
             <Anchor icon={<LoginIcon />} label='LOGIN' animateIcon={true} path='login' />
             <Anchor icon={<UserAddIcon />} label='REGISTER' animateIcon={true} path='register' />            
             <hr/>
           </Menu>
           </Box>
-          <Footer>
+          <Footer align='center' >
             <Anchor icon={<SocialFacebookIcon />} animateIcon={true} href='#' />
             <Anchor icon={<SocialTwitterIcon />} animateIcon={true} href='#' />
             <Anchor icon={<SocialInstagramIcon />} animateIcon={true} href='#' />
